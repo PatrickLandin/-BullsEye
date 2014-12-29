@@ -12,7 +12,8 @@ class ViewController: UIViewController {
 	
     
 	@IBOutlet weak var slider: UISlider!
-
+	@IBOutlet weak var targetLabel: UILabel!
+	
 	@IBAction func showAlert(sender: AnyObject) {
 			
 		let sliderMessage = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)"
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
 		presentViewController(alert, animated: true, completion: nil)
 		
 		self.startNewRound()
+		self.updateLabels()
 			
 	}
 	
@@ -43,11 +45,18 @@ class ViewController: UIViewController {
 		slider.value = Float(currentValue)
 		
 	}
+	
+	func updateLabels() {
+		
+		targetLabel.text = String(targetValue)
+		
+	}
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
 			
 		self.startNewRound()
+		self.updateLabels()
 			
 	}
 	

@@ -96,6 +96,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="slider" destination="6fj-eM-IlD" id="VWa-ec-Qgo"/>
+                        <outlet property="targetLabel" destination="kgb-sV-HSd" id="qOK-VP-rpx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
