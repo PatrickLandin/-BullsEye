@@ -80,14 +80,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0C-cp-Yfj">
+                                <rect key="frame" x="550" y="306" width="22" height="22"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uim-zG-OjF">
                                 <rect key="frame" x="131" y="301" width="70" height="30"/>
                                 <state key="normal" title="Start Over">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0C-cp-Yfj">
-                                <rect key="frame" x="550" y="306" width="22" height="22"/>
+                                <connections>
+                                    <action selector="startOver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S82-lG-NdZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.65589021380000001" green="1" blue="0.98591694080000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,6 +98,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="roundLabel" destination="VuX-IR-9O9" id="Yb6-ta-kwp"/>
+                        <outlet property="scoreLabel" destination="hh0-v0-Yac" id="W2K-w3-eTg"/>
                         <outlet property="slider" destination="6fj-eM-IlD" id="VWa-ec-Qgo"/>
                         <outlet property="targetLabel" destination="kgb-sV-HSd" id="qOK-VP-rpx"/>
                     </connections>
