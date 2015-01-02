@@ -1,6 +1,7 @@
 
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
     
@@ -35,11 +36,8 @@ class ViewController: UIViewController {
 			if difference == 2 {
 				points += 20
 			}
-			if difference == 3 {
-				points += 10
-			}
 		} else if difference < 9 {
-			title = "Not bad I guess."
+			title = "Not bad, I guess."
 		} else if difference < 16 {
 			title = "Not even close..."
 		} else {
@@ -73,6 +71,16 @@ class ViewController: UIViewController {
 		
 		startNewGame()
 		updateLabels()
+		
+		
+		// Adding animation
+		
+		let transition = CATransition()
+		transition.type = kCATransitionFade
+		transition.duration = 1
+		transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+		
+		view.layer.addAnimation(transition, forKey: nil)
 	}
 	
 	
